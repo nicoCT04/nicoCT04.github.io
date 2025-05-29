@@ -1,0 +1,19 @@
+/* Media queries para dispositivos móviles */
+@media (max-width: 768px) {
+   .section {
+      padding: 2rem 1rem;
+   }
+   
+   .section-title {
+      font-size: 2rem;
+   }
+}
+
+/* Media queries para tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+   .section {
+      padding: 3rem 1.5rem;
+   }
+}
+
+/* Media queries específicas para cada componente se añadirán después */
