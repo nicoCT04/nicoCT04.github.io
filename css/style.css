@@ -1,0 +1,109 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f0f2f5;
+    color: #333;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.header {
+    background-color: #222;
+    color: white;
+    padding: 1rem 0;
+}
+
+.logo {
+    font-size: 1.8rem;
+}
+
+.nav {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.nav a:hover {
+    color: #61dafb;
+}
+
+.btn-menu {
+    display: none;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* Secciones */
+.section {
+    padding: 2rem 1rem;
+    background-color: white;
+    margin: 1rem 0;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgb(0 0 0 / 0.1);
+}
+
+.proyectos-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.proyecto {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-radius: 4px;
+    background-color: #fafafa;
+}
+
+.footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #222;
+    color: white;
+    margin-top: 2rem;
+}
+
+/* Responsive móvil */
+@media (max-width: 768px) {
+    .nav {
+        display: none;
+        flex-direction: column;
+        background-color: #222;
+        position: absolute;
+        top: 56px;
+        right: 0;
+        width: 200px;
+        border-radius: 0 0 0 6px;
+    }
+
+    .nav.show {
+        display: flex;
+    }
+
+    .btn-menu {
+        display: block;
+    }
+
+    .proyectos-grid {
+        grid-template-columns: 1fr;
+    }
+}
