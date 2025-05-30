@@ -127,7 +127,7 @@ body {
     padding-top: 60px;
     margin: 0;
     background: linear-gradient(rgba(1, 22, 47, 0.7), rgba(1, 22, 47, 0.9)), 
-    url('../assets/images/space-background2.jpg');
+    url('../assets/images/space-background3.jpg');
     background-size: cover;
     background-position: center;
     position: relative;
@@ -135,21 +135,81 @@ body {
     box-sizing: border-box;
 }
 
-.hero::before{
+.hero::before {
     content: '';
     position: absolute;
     width: 100%;
     height: 100%;
-    background-image: radial-gradient(white 1px, transparent 1px);
-    background-size: 50px 50px;
-    opacity: 0.3;
-    animation: floatingStars 150s linear infinite;
+    background-image: 
+        radial-gradient(white 1px, transparent 1px),
+        radial-gradient(white 0.5px, transparent 0.5px);
+    background-size: 150px 150px, 100px 100px;
+    background-position: 0 0, 25px 25px;
+    opacity: 0.2;
+    animation: twinkling 8s ease-in-out infinite;
+    top: 0;
+    left: 0;
+}
+
+@keyframes twinkling {
+    0% { opacity: 0.1; }
+    50% { opacity: 0.3; }
+    100% { opacity: 0.1; }
 }
 
 
-@keyframes floatingStars {
-    0% { background-position: 0 0; }
-    100% { background-position: 1000px 1000px; }
+.shooting-star {
+    position: absolute;
+    height: 1px; /* Más fino para parecer una estela */
+    background: linear-gradient(90deg, 
+                rgba(255,255,255,0) 0%, 
+                rgba(233, 177, 89, 0.3) 20%,
+                rgba(255,255,255,0.9) 45%, 
+                rgba(56, 126, 247, 0.7) 55%,
+                rgba(255,255,255,0) 100%);
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.8);
+    animation: shoot ease-out forwards; /* Cambiado a ease-out para movimiento natural */
+    z-index: 2;
+    transform-origin: right center;
+}
+
+/* Punto brillante en la cabeza de la estrella */
+.shooting-star::after {
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background-color: white;
+    border-radius: 50%;
+    top: -1px;
+    right: 0;
+    box-shadow: 0 0 8px 2px rgba(255, 255, 255, 0.8),
+                0 0 12px 6px rgba(233, 177, 89, 0.4);
+}
+
+@keyframes shoot {
+    0% { 
+        opacity: 0;
+        transform: translateX(0) translateY(0) rotate(var(--start-angle));
+    }
+    2% { /* Aparición casi inmediata */
+        opacity: 1;
+        transform: translateX(calc(var(--travel-distance-x) * 0.02)) 
+                  translateY(calc(var(--travel-distance-y) * 0.02))
+                  rotate(calc(var(--start-angle) + var(--curve-angle) * 0.02));
+    }
+    80% { /* Comienza a desvanecerse antes del final */
+        opacity: 1;
+        transform: translateX(calc(var(--travel-distance-x) * 0.8)) 
+                  translateY(calc(var(--travel-distance-y) * 0.8))
+                  rotate(calc(var(--start-angle) + var(--curve-angle) * 0.8));
+    }
+    100% { /* Completa el desvanecimiento */
+        opacity: 0;
+        transform: translateX(var(--travel-distance-x)) 
+                    translateY(var(--travel-distance-y))
+                    rotate(calc(var(--start-angle) + var(--curve-angle)));
+    }
 }
 
 .hero-content {
