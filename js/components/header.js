@@ -20,6 +20,7 @@ const Header = {
                   <li><a href="#about-section">Sobre Mí</a></li>
                   <li><a href="#projects-section">Proyectos</a></li>
                   <li><a href="#experience-section">Experiencia</a></li>
+                  <li><a href="#education-section">Educación</a></li>
                   <li><a href="#contact-section">Contacto</a></li>
                </ul>
             </div>

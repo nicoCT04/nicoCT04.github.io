@@ -5,6 +5,7 @@ import Projects from './components/projects.js';
 import Skills from './components/skills.js';
 import Experience from './components/experience.js';
 import Contact from './components/contact.js';
+import Education from './components/education.js';
 
 //Clase principal de la app
 
@@ -17,7 +18,8 @@ class App {
             projects : Projects,
             skills : Skills,
             experience : Experience,
-            contact : Contact
+            contact : Contact,
+            education : Education
         }
     }
 
@@ -42,7 +44,9 @@ class App {
             await this.renderComponent('projects', mainContent);
             await this.renderComponent('skills', mainContent);
             await this.renderComponent('experience', mainContent);
+            await this.renderComponent('education', mainContent)
             await this.renderComponent('contact', mainContent);
+
 
             //Funcionalidad adicional
             this.setupEventListener();

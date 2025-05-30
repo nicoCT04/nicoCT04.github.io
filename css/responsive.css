@@ -73,4 +73,26 @@
       flex-direction: column;
       gap: 0.5rem;
    }
+
+   .about-content {
+      flex-direction: column;
+      gap: 2rem;
+   }
+   
+   .image-container {
+      width: 200px;
+      height: 200px;
+   }
+   
+   .about-intro {
+      font-size: 1.3rem;
+   }
+   
+   .about-details {
+      grid-template-columns: 1fr;
+   }
+   
+   .about-buttons {
+      justify-content: center;
+   }
 }
