@@ -1,4 +1,4 @@
-/* Reset basisco */
+/* Reset basico */
 * {
    margin: 0;
    padding: 0;
@@ -6,12 +6,17 @@
 }
 
 html, body {
-   height: 100%;
+   margin: 0;
+   padding: 0;
+   width: 100%;
+   overflow-x: hidden; /* Esto previene cualquier desbordamiento horizontal */
 }
 
-body {
-   line-height: 1.5;
-   -webkit-font-smoothing: antialiased;
+/* Asegurarnos que los componentes principales ocupan todo el ancho */
+body, #app, #header-section {
+    width: 100vw; /* vw = viewport width, asegura que sea el ancho exacto del viewport */
+    max-width: 100vw; /* Limita también el ancho máximo */
+    box-sizing: border-box; /* Para que los paddings no añadan ancho extra */
 }
 
 img, picture, video, canvas, svg {
@@ -26,3 +31,4 @@ input, button, textarea, select {
 p, h1, h2, h3, h4, h5, h6 {
    overflow-wrap: break-word;
 }
+

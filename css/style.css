@@ -1,23 +1,41 @@
 /* basico */
 
 :root {
-    --primary-color: #0070f3;
-    --background-color: #f9f9f9;
-    --text-color: #333;
-    --secondary-color: #6c757d;
-    --accent-color: #f5a623;
-    --succes-color: #28a745;
-    --font-main: 'Poppins', san-serif;
+    --primary-color: #387ef7; /* Azul NASA */
+    --secondary-color: #fafafa; /* Rojo NASA */
+    --background-color: #01162F; /* Azul oscuro profundo */
+    --text-color: #E9E9E9; /* Blanco hueso para texto */
+    --accent-color: #e9b159; /* Dorado metálico */
+    --dark-accent: #020d1c; /* Negro espacio profundo */
+    --font-main: 'Chakra Petch', 'Poppins', sans-serif; /* Fuente más tecnológica */
 }
 
 body {
     font-family: var(--font-main);
     background-color: var(--background-color);
     color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    width: 100%;
 }
 
 #app {
     min-height: 100vh;
+    width: 100%;
+}
+
+#header-section {
+    padding-top: 0;
+    margin: 0 ;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#header-section.section {
+    max-width: 100%;
 }
 
 /* Estilos para el indicador de carga */
@@ -36,7 +54,6 @@ body {
 
 .section {
     padding: 4rem 2rem;
-    max-width: 1200px;
     margin: 0 auto;  /*cuidado aqui */
 }
 
@@ -53,7 +70,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;  /* tamanio de la barra */
-    background-color: #fff;
+    background-color: #191553;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     position: fixed;
     width: 100%;
@@ -104,16 +121,51 @@ body {
     height: 100vh;
     display: flex;
     align-items: center;
-    padding: 0rem 2rem;
-    background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)), url('../assets/images/HeroLogo.jpg');
+    justify-content: center;
+    width: 100vw;
+    padding: 0;
+    padding-top: 60px;
+    margin: 0;
+    background: linear-gradient(rgba(1, 22, 47, 0.7), rgba(1, 22, 47, 0.9)), 
+    url('../assets/images/space-background.jpg');
     background-size: cover;
     background-position: center;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.hero::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(white 1px, transparent 1px);
+    background-size: 50px 50px;
+    opacity: 0.3;
+    animation: floatingStars 150s linear infinite;
+}
+
+
+@keyframes floatingStars {
+    0% { background-position: 0 0; }
+    100% { background-position: 1000px 1000px; }
 }
 
 .hero-content {
+    width: 100%;
     max-width: 800px;
     margin: 0 auto;
     text-align: center;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 15px rgba(56, 126, 247, 0.5), 0 0 25px rgba(56,126,247,0.4);
 }
 
 .hero h1 span {
