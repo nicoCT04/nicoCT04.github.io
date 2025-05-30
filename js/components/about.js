@@ -58,11 +58,13 @@ const About = {
       const aboutSection = document.getElementById('about-section');
       if (aboutSection) {
          const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-               if (entry.isIntersecting) {
-                  entry.target.classList.add('visible');
-               }
-            });
+               entries.forEach(entry => {
+                  if (entry.isIntersecting) {
+                     entry.target.classList.add('visible');
+                  }
+               });
+         }, {
+               threshold: 0.3
          });
          observer.observe(aboutSection);
       }

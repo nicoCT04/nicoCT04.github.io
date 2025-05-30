@@ -275,10 +275,15 @@ body {
 }
 
 /*-----------About css ---------------------------------------*/
-#about-section {
-    background-color: var(--dark-accent);
-    position: relative;
-    overflow: hidden;
+.about-content {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 5s ease-out, transform 2s ease-out; /* Lenta pero menos que el contenedor */
+}
+
+#about-section.visible .about-content {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 #about-section::before{
@@ -304,6 +309,7 @@ body {
     display: flex;
     gap: 4rem;
     align-items: center;
+    
 }
 
 .about-image{
@@ -398,15 +404,4 @@ body {
     gap: 1rem;
 }
 
-/*Transicion para la seccion */
-#about-section{
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-#about-section.visible{
-    opacity: 1;
-    transform: translateY(0);
-}
 

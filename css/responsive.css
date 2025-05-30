@@ -18,11 +18,12 @@
       top: 60px; /* Ajusta según la altura de tu barra de navegación */
       left: 0;
       right: 0;
-      background-color: white;
+      background-color: #191553;;
+      border-bottom: 1px solid var(--primary-color);
       height: 0;
       overflow: hidden;
       transition: all 0.3s ease-in-out;
-      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
    }
    
    .nav-links.active {
