@@ -7,7 +7,7 @@ const Contact = {
     render: async function (container) {
         container.innerHTML = `
         <div class = "contact-container">
-            <h2 class = "section-title"> Contactame </h2>
+            <h2 class = "section-title"> Contáctame </h2>
 
             <div class= "contact-content">
                 <div class = "contact-text">
@@ -15,43 +15,60 @@ const Contact = {
                     proyectos o un simple saludo amigable </p>
                 </div>
             
-            <div class = "contact-box-container">
+            <div class = "contact-info">
                 <h2>Hablemos</h2>
-                <div class = "email-contact">
-                    <i class = "email-icon"></i>
+
+                <div class = "contact-item email-contact">
+                    <img src="assets/images/Gmail-icon.png" class=contact-icon" alt="Email">
                     <div>
                         <h3>Email</h3>
-                        <p>nicoconcua@gmail.com</p>
+                        <p><a href="mailto:nicoconcua@gmail.com">nicoconcua@gmail.com</a></p>
                     </div>
                 </div>
 
-                <div class = "linkedln-contact">
-                    <i class = "linkedln-icon"></i>
+                <div class = "contact-item linkedin-contact">
+                    <img src="assets/images/linkedin.png" class=contact-icon" alt="Linkedin">
                     <div>
-                        <h3>Linkdedln</h3>
-                        <p>www.linkedin.com/in/nicoconcua</p>
+                        <h3>Linkdedin</h3>
+                        <p><a href="www.linkedin.com/in/nicoconcua" target="_blank">linkedin.com/in/nicoconcua</a></p>
                     </div>
                 </div>
 
-                <div class = "github-contact">
-                    <i class = "github-icon"></i>
+                <div class = "contact-item github-contact">
+                    <img src="assets/images/Github-icon.png" class=contact-icon" alt="Github">
                     <div>
-                        <h3>Github Personal</h3>
+                        <h3>Github PERSONAL</h3>
                         <p><a href="https://github.com/nicoCT04" target="_blank">github.com/nicoCT04</a></p>
-                        <h3>Github Academico</h3>
-                        <p>https://github.com/nicoCT4</p>
+                        <h3>Github ACADEMÍCO</h3>
+                        <p><a href="https://github.com/nicoCT4" target ="_blank">github.com/nicoCT4</a></p>
                     </div>
                 </div>
 
-                <h2> Manda un mensaje </h2>
-                <div class = "send-email">
-                    <div>
-                        <h3>Tu nombre</h3>
-                        <h3>Email </h3>
-                        <h3>Asunto </h3>
-                        <h3>Tu mensaje</h3>
-                    </div>
-                    <div class="send-email-button">
+                <div class = "contact-form">
+                    <h2>Mándame un mensaje</h2>
+                    <form id = "contact-form">
+                        <div class = "form-group">
+                            <label for ="name">Tu nombre</label>
+                            <input type="text" id="name" name = "name" required>
+                        </div>
+
+                        <div class = "form-group">
+                            <label for ="email">Email</label>
+                            <input type="email" id="email" name = "email" required>
+                        </div>
+
+                        <div class = "form-group">
+                            <label for ="subject">Asunto</label>
+                            <input type="text" id="subject" name = "subject" required>
+                        </div>
+
+                        <div class = "form-group">
+                            <label for ="message">Tu mensaje</label>
+                            <textarea id = "message" name = "message" rows= "5" required></textarea>
+                        </div>
+
+                        <button type = "submit" class="btn btn-primary">Enviar mensaje </button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -72,7 +89,38 @@ const Contact = {
             });
             observer.observe(contactSection)
         }
-    }
+
+        const contactForm = document.getElementById('contact-form');
+        if (contactForm) {
+            // Inicializar EmailJS con tu clave pública
+            emailjs.init("5mFkliu7G_2UU8iwb");
+            
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                
+                // Mostrar indicador de carga
+                const submitButton = contactForm.querySelector('button[type="submit"]');
+                const originalText = submitButton.textContent;
+                submitButton.textContent = 'Enviando...';
+                submitButton.disabled = true;
+                
+                // Enviar email usando EmailJS
+                emailjs.sendForm('service_id', 'template_id', contactForm)
+                    .then(() => {
+                        alert('¡Mensaje enviado correctamente!');
+                        contactForm.reset();
+                    })
+                    .catch((error) => {
+                        console.error('Error al enviar el mensaje:', error);
+                        alert('Hubo un error al enviar tu mensaje. Por favor, intenta de nuevo.');
+                    })
+                    .finally(() => {
+                        submitButton.textContent = originalText;
+                        submitButton.disabled = false;
+                    });
+            });
+        }
+        }
 };
 
 export default Contact;

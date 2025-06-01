@@ -96,4 +96,13 @@
    .about-buttons {
       justify-content: center;
    }
+
+   .contact-info {
+      grid-template-columns: 1fr;
+   }
+   
+   .contact-form {
+      grid-column: 1;
+      grid-row: auto;
+   }
 }
