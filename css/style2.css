@@ -87,3 +87,128 @@
 }
 
 
+/* --------------Estilos para la sección de Educación --------------------------------------*/
+#education-section {
+   min-height: 100vh;
+   position: relative;
+   padding: 4rem 2rem;
+}
+
+.education-container{
+   max-width: 1200px;
+   margin: 0 auto;
+}
+
+.education-content {
+   opacity: 0;
+   transform: translateY(30px);
+   transition: opacity 3s ease-out, transform 1.5s ease-out;
+   position: relative;
+   padding: 2rem 0;
+}
+
+#education-section.visible .education-content {
+   opacity: 1;
+   transform: translateY();
+}
+
+.education-timeline{
+   position: relative;
+   max-width: 1000px;
+   margin: 0 auto;
+}
+
+.education-timeline::after{
+   content: "";
+   position: absolute;
+   width: 6px;
+   background: var(--primary-color);
+   top: 0;
+   bottom: 0;
+   left: 50%;
+   margin-left: -3px;
+   border-radius: 3px;
+   box-shadow: 0 0 10px rgba(56, 126, 247, 0.5);
+}
+
+.education-item {
+   position: relative;
+   width: 50%;
+   padding: 10px 40px ;
+   margin-bottom: 50px;
+}
+
+.education-item.left {
+   left: 0;
+}
+
+.education-item.right {
+   left: 50%;
+}
+
+.education-icon {
+   position: absolute;
+   width: 40px;
+   height: 40px;
+   top: 15px;
+   z-index: 10;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: white;
+   border-radius: 50%;
+   border: 2px solid var(--primary-color);
+   box-shadow: 0 0 10px rgba(56, 126, 247, 0.6);
+   padding: 4px;
+}
+
+.education-item.left .education-icon{
+   right: -20px;
+}
+
+.education-item.right .education-icon {
+   left: -20px;
+}
+
+.education-icon img {
+   width: 100%;
+   height: 100%;
+   object-fit: contain;
+   filter: brightness(1.2);
+}
+
+
+.education-card {
+   background: rgba(1,22,47,0.6);
+   border: 2px solid rgba(56, 126, 247, 0.2);
+   padding: 1.5rem;
+   border-radius: 8px;
+   position: relative;
+   transition: transform 0.3s, box-shadow 0.3s;
+   box-shadow: 0 8px 20px rgba(0, 112, 243, 0.8);
+}
+
+.education-card:hover{
+   transform: translateY(-5px);  /*Mueve la tarjeta */
+}
+
+.education-date{
+   display: inline-block;
+   padding: 0.3rem 0.8rem;
+   background: var(--primary-color);
+   color: white;
+   border-radius: 4px;
+   margin-bottom: 0.5rem;
+   font-size: 0.9rem;
+}
+
+.education-card h3 {
+   color: #f0dd74;
+}
+
+.education-card h4 {
+   color: #f0dd74;
+}
+
+
+

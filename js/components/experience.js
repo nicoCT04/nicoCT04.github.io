@@ -34,7 +34,7 @@ const Experience = {
                 </div>
                 <div class="experience-buttons">
                     <a href="#projects-section" class="btn btn-primary">Ver mis proyectos</a>
-                    <a href="#skills-section" class="btn btn-secondary">Conocer mis habilidades</a>
+                    <a href="#skills-section" class="btn btn-secondary">Conoce mis habilidades</a>
                 </div>
             </div>
         </div>

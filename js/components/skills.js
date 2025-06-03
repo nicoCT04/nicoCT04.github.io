@@ -1,6 +1,6 @@
 const Skills = {
     init: async function(container) {
-        container.innerHTML = `<h2>Skills</h2><p>Esta sección está en construcción...</p>`;
+        container.innerHTML = `<h2>Mis habilidades</h2><p>Esta sección está en construcción...</p>`;
     }
 };
 
