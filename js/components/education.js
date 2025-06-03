@@ -17,7 +17,7 @@ const Education = {
                             <div class="education-date">2007 - 2022</div>
                             <h3>Bachillerato en Ciencias y Letras</h3>
                             <h4>Colegio Americano del Sur</h4>
-                            <p>Realicé toda mi formación académica en esta institución, desde pre-primaria hasta graduarme con honores del bachillerato.</p>
+                            <p>Realicé toda mi formación académica en esta institución, desde pre-primaria hasta graduarme del bachillerato.</p>
                         </div>
 
                         <div class="education-icon graduation-icon">
@@ -32,7 +32,7 @@ const Education = {
                             <div class="education-date">2023 - Presente</div>
                             <h3>Ingeniería en Ciencias de la Computación</h3>
                             <h4>Universidad del Valle de Guatemala</h4>
-                            <p>Actualmente cursando el quinto semestre. Enfocado en desarrollo web y aplicaciones. Miembro activo del club de [menciona club o actividad].</p>
+                            <p>Actualmente cursando el quinto semestre. Enfocado en desarrollo web y aplicaciones.</p>
                         </div>
 
                         <div class= "education-icon code-icon">

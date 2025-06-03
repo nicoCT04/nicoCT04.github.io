@@ -170,4 +170,19 @@
       vertical-align: middle;
       margin-right: 10px;
    }
+
+   .skills-grid {
+      grid-template-columns: 1fr; /* Una sola columna en móviles */
+   }
+   
+   .skill-items {
+      grid-template-columns: repeat(2, 1fr); /* 2 cajas por fila en móvil */
+   }
+}
+
+/* Para pantallas muy pequeñas */
+@media (max-width: 480px) {
+   .skill-items {
+      grid-template-columns: 1fr; /* 1 caja por fila en pantallas muy pequeñas */
+   }
 }
