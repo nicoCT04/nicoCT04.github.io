@@ -1,0 +1,89 @@
+#experience-section {
+   min-height: 100vh; /* Para que ocupe toda la altura de la pantalla */
+   position: relative;
+   padding: 4rem 2rem;
+}
+
+.experience-container {
+   max-width: 1200px;
+   margin: 0 auto;
+   padding: 2rem;
+}
+
+.experience-content{
+   opacity: 0;
+   transform: translateY(30px) ;
+   transition: opacity 3s ease-out, transform 1.5s ease-out;
+}
+
+#experience-section.visible .experience-content{
+   opacity: 1;
+   transform: translateY(0);
+}
+
+.experience-intro{
+   font-size: 1.3rem;
+   line-height: 1.6;
+   margin-bottom: 2rem;
+   color: var(--accent-color);
+}
+
+.experience-info{
+   background: rgba(1,22,47,0.6);
+   border-radius: 8px;
+   border: 2px solid rgba(56,126,247,0.2);
+   padding: 2rem;
+   margin-bottom: 2.5rem; /*baja los botones */
+   box-shadow: 0 8px 20px rgba(0, 112, 243, 0.8)
+}
+
+.experience-text {
+   line-height: 1.5;
+}
+
+.experience-text p {
+   margin-bottom: 1rem;
+}
+
+.experience-text .highlight{
+   color: var(--primary-color);
+   font-weight: 500;
+}
+
+.experience-ponts li:before{
+   content: "";
+   position: absolute;
+   width: 8px;
+   height: 8px;
+   background-color: var(--primary-color);
+   border-radius: 50%;
+   left: -1.2rem;
+   top: 0.5rem;
+}
+
+.experience-buttons {
+   display: flex;
+   gap: 1rem;
+   justify-content: center;
+}
+
+.experience-gif {
+   position: relative;
+   margin-bottom: 2rem;
+   display: flex;
+   justify-content: center;
+}
+
+/* Estilo para el GIF */
+.decorative-gif {
+   max-width: 300px;
+   border-radius: 10px;
+   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+   transition: transform 0.3s;
+}
+
+.decorative-gif:hover {
+   transform: translateY(-5px);
+}
+
+

@@ -12,7 +12,7 @@ const Contact = {
             <div class= "contact-content">
                 <div class = "contact-text">
                     <p class = "intro-contact"> Sientete libre de contactarme para 
-                    proyectos o un simple saludo amigable </p>
+                    proyectos o un simple saludo </p>
                 </div>
             
             <div class = "contact-info">
