@@ -19,7 +19,7 @@ const Contact = {
                 <h2>Hablemos</h2>
 
                 <div class = "contact-item email-contact">
-                    <img src="assets/images/Gmail-icon.png" class=contact-icon" alt="Email">
+                    <img src="assets/images/Gmail-icon.png" class="contact-icon" alt="Email">
                     <div>
                         <h3>Email</h3>
                         <p><a href="mailto:nicoconcua@gmail.com">nicoconcua@gmail.com</a></p>
@@ -27,7 +27,7 @@ const Contact = {
                 </div>
 
                 <div class = "contact-item linkedin-contact">
-                    <img src="assets/images/linkedin.png" class=contact-icon" alt="Linkedin">
+                    <img src="assets/images/linkedin.png" class="contact-icon" alt="Linkedin">
                     <div>
                         <h3>Linkdedin</h3>
                         <p><a href="www.linkedin.com/in/nicoconcua" target="_blank">linkedin.com/in/nicoconcua</a></p>
@@ -35,7 +35,7 @@ const Contact = {
                 </div>
 
                 <div class = "contact-item github-contact">
-                    <img src="assets/images/Github-icon.png" class=contact-icon" alt="Github">
+                    <img src="assets/images/Github-icon.png" class="contact-icon" alt="Github">
                     <div>
                         <h3>Github PERSONAL</h3>
                         <p><a href="https://github.com/nicoCT04" target="_blank">github.com/nicoCT04</a></p>
@@ -105,7 +105,7 @@ const Contact = {
                 submitButton.disabled = true;
                 
                 // Enviar email usando EmailJS
-                emailjs.sendForm('service_id', 'template_id', contactForm)
+                emailjs.sendForm('service_vbyh422', 'template_5m3tbyh', contactForm)
                     .then(() => {
                         alert('¡Mensaje enviado correctamente!');
                         contactForm.reset();
