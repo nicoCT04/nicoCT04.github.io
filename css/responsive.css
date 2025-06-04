@@ -178,13 +178,18 @@
    .skill-items {
       grid-template-columns: repeat(2, 1fr); /* 2 cajas por fila en móvil */
    }
-
+   
    .project-card {
       grid-template-columns: 1fr; /* Cambiar a una columna en móviles */
    }
    
    .project-image {
       height: 200px; /* Altura fija para imágenes en móviles */
+      border-radius: 8px 8px 0 0; /* Redondear esquinas superiores */
+   }
+   
+   .project-image img {
+      border-radius: 8px 8px 0 0; /* Redondear esquinas superiores */
    }
    
    .project-details {
