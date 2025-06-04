@@ -178,6 +178,24 @@
    .skill-items {
       grid-template-columns: repeat(2, 1fr); /* 2 cajas por fila en móvil */
    }
+
+   .project-card {
+      grid-template-columns: 1fr; /* Cambiar a una columna en móviles */
+   }
+   
+   .project-image {
+      height: 200px; /* Altura fija para imágenes en móviles */
+   }
+   
+   .project-details {
+      padding: 1.2rem;
+   }
+   
+   .project-type {
+      top: -10px;
+      left: 20px;
+      right: auto;
+   }
 }
 
 /* Para pantallas muy pequeñas */
@@ -185,4 +203,5 @@
    .skill-items {
       grid-template-columns: 1fr; /* 1 caja por fila en pantallas muy pequeñas */
    }
+
 }
