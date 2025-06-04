@@ -75,6 +75,26 @@ const Skills = {
                                 </div>
                             </div>
                         </div>
+
+                        <!--Otras -->
+                        <div class="skill-category">
+                            <h3 class="category-title">Otras</h3>
+                            <div class="skill-items">
+                                <div class="skill-box">
+                                    <div class="skill-icon">
+                                        <img src="assets/images/KotlinLogo2.png" alt="Kotlin">
+                                    </div>
+                                    <span>Kotlin</span>
+                                </div>
+
+                                <div class="skill-box">
+                                    <div class="skill-icon">
+                                        <img src="assets/images/AndroidStudioLogo.png" alt="AndroiddStudio">
+                                    </div>
+                                    <span>Android Studio</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     <!-- Columna Derecha -->
