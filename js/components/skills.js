@@ -73,6 +73,13 @@ const Skills = {
                                     </div>
                                     <span>JavaC</span>
                                 </div>
+
+                                <div class="skill-box">
+                                    <div class="skill-icon">
+                                        <img src="assets/images/NetLogo.png" alt=".Net">
+                                    </div>
+                                    <span>.Net</span>
+                                </div>
                             </div>
                         </div>
 
