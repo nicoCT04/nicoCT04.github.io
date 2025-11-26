@@ -47,6 +47,7 @@ const About = {
                   <div class="about-buttons">
                      <a href="#contact-section" class="btn btn-primary">Contactame</a>
                      <a href="assets/documents/CV-Nicolás-Concuá.pdf" target="_blank" class="btn btn-secondary">Descargar CV</a>
+                     <a href="assets/documents/CV-Nicolás-Concuá-E.pdf" target="_blank" class="btn btn-secondary">Descargar CV en Inglés</a>
                   </div>
                </div>
             </div>
