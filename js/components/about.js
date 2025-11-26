@@ -17,7 +17,7 @@ const About = {
                </div>
 
                <div class="about-text">
-                  <p class="about-intro"> Hola, soy <span class="highlight">Nicolás Concuá</span>, estudiante de tercer año de 
+                  <p class="about-intro"> Hola, soy <span class="highlight">Nicolás Concuá</span>, estudiante de cuarto año de 
                   Ingeniería en Ciencias de la Computación y Tecnologia de la Información
                   en la Universidad del Valle de Guatemala.</p>
                   

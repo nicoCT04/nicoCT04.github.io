@@ -37,7 +37,7 @@ const Header = {
          <div class="hero">
             <div class="hero-content">
                <h1>Hola soy <span>Nicolás Concuá</span></h1>
-               <p>Desarrollador web de tercer a año que busca nuevas oportunidades y experiencias de programación</p>
+               <p>Desarrollador web de cuarto año que busca nuevas oportunidades y experiencias de programación</p>
                <div class= "hero-buttons">
                   <a href="#projects-section" class="btn btn-primary">Ver proyectos</a>
                   <a href="#contact-section" class="btn btn-secondary">Contactarme</a>
