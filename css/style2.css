@@ -493,6 +493,11 @@
    color: #fff;
 }
 
+
+.project-type.graphics {
+   background: linear-gradient(135deg, #ab02f3, #ff4b2b);
+}
+
 .project-type.frontend {
    background: linear-gradient(135deg, #61dafb, #2d88ff);
 }

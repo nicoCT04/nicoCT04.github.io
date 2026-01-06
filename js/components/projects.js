@@ -80,6 +80,25 @@ const Projects = {
                                 </a>
                             </div>
                         </div>
+                        
+                        <!-- Proyecto 4: Nave con Rust -->
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="assets/images/space_ship1.png" alt="Juego de Memoria">
+                            </div>
+                            <div class="project-details">
+                                <div class="project-type graphics">Graficas por computadora</div>
+                                <h3 class="project-title">Nave hecha con Rust</h3>
+                                <p class="project-description">Este proyecto es un renderizador de software para un modelo 3D de una nave espacial creado en Blender. Demuestra conceptos básicos de renderizado 3D, incluyendo la carga de modelos, la rasterización de triángulos y transformaciones básicas..</p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">Rust</span>
+                                </div>
+                                <a href="https://github.com/nicoCT04/SpaceShip_Rust" target="_blank" class="project-link">
+                                    <img src="assets/images/Github-icon.png" alt="Github">
+                                    <span>Ver repositorio</span>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
