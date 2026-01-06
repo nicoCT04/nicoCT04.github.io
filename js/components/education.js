@@ -32,7 +32,7 @@ const Education = {
                             <div class="education-date">2023 - Presente</div>
                             <h3>Ingeniería en Ciencias de la Computación</h3>
                             <h4>Universidad del Valle de Guatemala</h4>
-                            <p>Actualmente cursando el quinto semestre. Enfocado en desarrollo web y aplicaciones.</p>
+                            <p>Actualmente cursando el septimo semestre. Enfocado en desarrollo web y aplicaciones.</p>
                         </div>
 
                         <div class= "education-icon code-icon">
