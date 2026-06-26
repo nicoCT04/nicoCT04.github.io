@@ -94,7 +94,13 @@
    }
    
    .about-buttons {
-      justify-content: center;
+      flex-direction: column;
+      align-items: stretch;
+   }
+
+   .about-buttons .btn {
+      width: 100%;
+      text-align: center;
    }
 
    .contact-info {
@@ -122,20 +128,8 @@
       margin-bottom: 0.8rem;
    }
 
-   .experience-info {
-      display: flex;
-      flex-direction: row-reverse;
-      gap: 2rem;
-      align-items: flex-start;
-   }
-   
-   .experience-text {
-      flex: 2;
-   }
-   
-   .experience-gif {
-      flex: 1;
-      margin: 4;
+   .decorative-gif {
+      max-width: 220px;
    }
 
    .education-timeline::after {
@@ -152,7 +146,14 @@
    .education-item.right {
       left: 0;
    }
-   
+
+   /* Los iconos se alinean sobre la línea del timeline en móvil */
+   .education-item.left .education-icon,
+   .education-item.right .education-icon {
+      left: 11px;
+      right: auto;
+   }
+
    .education-item::after {
       left: 21px;
    }
