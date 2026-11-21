@@ -211,3 +211,32 @@
    }
 
 }
+/* Placeholder de proyectos privados en móvil (versión React) */
+@media (max-width: 768px) {
+   .project-image.placeholder {
+      border-radius: 8px 8px 0 0;
+   }
+}
+
+/* Experiencia laboral en móvil: menos márgenes para que las tarjetas respiren */
+@media (max-width: 768px) {
+   #experience-section {
+      padding: 3rem 1rem;
+   }
+
+   .experience-container {
+      padding: 1rem 0;
+   }
+
+   .experience-jobs {
+      padding-left: 1.2rem;
+   }
+
+   .job-card {
+      padding: 1.2rem;
+   }
+
+   .job-card::before {
+      left: calc(-1.2rem - 9px);
+   }
+}

@@ -7,23 +7,22 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="css/reset.css">
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/style2.css">
-        <link rel="stylesheet" href="css/responsive.css">
-        <meta name="description" content="Portafolio profesional de Nicolás Concuá desarrollador web">
+        <!-- Los estilos viven en public/css y se cargan igual que antes (el orden importa) -->
+        <link rel="stylesheet" href="/css/reset.css">
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="/css/style2.css">
+        <link rel="stylesheet" href="/css/responsive.css">
+        <meta name="description" content="Portafolio de Nicolás Concuá: Deep Learning, ciencia de datos y desarrollo de software">
     </head>
     <body>
-        <!--Contendor principal para el contenido dinamico-->
+        <!--Contendor principal de React-->
         <div id = "app">
-            <!--Contenido de js-->
             <div id = "loading">Cargando...</div>
         </div>
 
-        <!--Script principal de la app-->
-        <script type="module" src="js/main.js"></script>
-
         <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+        <!--Script principal de la app-->
+        <script type="module" src="/src/main.jsx"></script>
     </body>
-    
 </html>

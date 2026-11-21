@@ -1,3 +1,6 @@
 # Ignorar el archivo de configuración de contacto que contiene claves API
 js/components/contact.js
 .claude
+node_modules
+dist
+.DS_Store

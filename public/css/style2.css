@@ -563,3 +563,138 @@
    background: rgba(56, 126, 247, 0.3);
    transform: translateX(5px);
 }
+/* ---------- Proyectos: nuevos tipos, privados y "ver más" (versión React) ---------- */
+.project-type.deeplearning {
+   background: linear-gradient(135deg, #7f00ff, #2d88ff);
+}
+
+.project-type.datascience {
+   background: linear-gradient(135deg, #f7971e, #e9446a);
+}
+
+.project-type.ai {
+   background: linear-gradient(135deg, #00c6ff, #00b09b);
+}
+
+.project-type.extension {
+   background: linear-gradient(135deg, #00b09b, #96c93d);
+}
+
+.project-image.placeholder {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background: linear-gradient(135deg, rgba(56, 126, 247, 0.25), rgba(1, 22, 47, 0.9));
+   border-radius: 8px 0 0 8px;
+}
+
+.project-placeholder {
+   text-align: center;
+   padding: 1.5rem;
+}
+
+.project-placeholder span {
+   font-size: 3rem;
+}
+
+.project-placeholder p {
+   margin-top: 0.8rem;
+   color: var(--accent-color);
+   font-weight: 600;
+}
+
+.project-team {
+   margin-bottom: 1rem;
+   opacity: 0.85;
+   font-size: 0.95rem;
+}
+
+.project-link.private {
+   cursor: default;
+}
+
+.project-link.private:hover {
+   transform: none;
+}
+
+.projects-more {
+   display: flex;
+   justify-content: center;
+   margin-top: 2.5rem;
+}
+
+.projects-more .btn {
+   cursor: pointer;
+   font-family: inherit;
+}
+
+/* ---------- Experiencia laboral (versión React): mismo estilo que las tarjetas de Educación ---------- */
+.experience-jobs {
+   display: flex;
+   flex-direction: column;
+   gap: 1.8rem;
+   margin-bottom: 2.5rem;
+   border-left: 3px solid rgba(56, 126, 247, 0.4);
+   padding-left: 1.8rem;
+}
+
+.job-card {
+   background: rgba(1,22,47,0.6);
+   border: 2px solid rgba(56, 126, 247, 0.2);
+   padding: 1.5rem;
+   border-radius: 8px;
+   position: relative;
+   transition: transform 0.3s, box-shadow 0.3s;
+   box-shadow: 0 8px 20px rgba(0, 112, 243, 0.8);
+}
+
+.job-card::before {
+   content: "";
+   position: absolute;
+   left: calc(-1.8rem - 10px);
+   top: 1.8rem;
+   width: 14px;
+   height: 14px;
+   border-radius: 50%;
+   background: var(--primary-color);
+   box-shadow: 0 0 10px rgba(0, 112, 243, 1);
+}
+
+.job-card:hover {
+   transform: translateY(-5px);
+}
+
+.job-date {
+   display: inline-block;
+   padding: 0.3rem 0.8rem;
+   background: var(--primary-color);
+   color: white;
+   border-radius: 4px;
+   margin-bottom: 0.5rem;
+   font-size: 0.9rem;
+}
+
+.job-card h3,
+.job-card h4 {
+   color: #f0dd74;
+}
+
+.job-card h4 {
+   margin-bottom: 0.8rem;
+   opacity: 0.9;
+}
+
+.job-points {
+   list-style: disc;
+   padding-left: 1.2rem;
+   line-height: 1.55;
+   margin-bottom: 1rem;
+}
+
+.job-points li {
+   margin-bottom: 0.4rem;
+}
+
+.job-card .project-tech {
+   margin-bottom: 0;
+}
